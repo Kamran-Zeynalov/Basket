@@ -53,6 +53,8 @@ let totalPrice = document.querySelector(".total-price");
 
 cart.addEventListener("click", function () {
   yourCart.classList.toggle("active");
+  let basket = JSON.parse(localStorage.getItem("basket"));
+  cartProduct.innerHTML = " ";
 
   basket.forEach((cartInfo) => {
     let list = `
